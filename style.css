@@ -1,0 +1,246 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ */
+
+
+
+
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+a,
+img,
+span,
+time,
+input,
+button,
+ion-icon { display: block; }
+
+  img { 
+
+  margin: auto;
+  height: auto; 
+				   
+			   
+				
+  }
+
+  input,
+  button {
+    background: none;
+    border: none;
+    font: inherit;
+  }
+
+  input { width: 100%; }
+
+  button { cursor: pointer; }
+
+  ion-icon { pointer-events: none; }
+
+  address { font-style: normal; }
+ 
+  
+  html {
+    font-family: var(--ff-poppins);
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--raisin-black-3);
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  :focus-visible { outline-offset: 4px; }
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.h1,
+.h2,
+.h3 {
+  color: var(--white);
+  font-family: var(--ff-oxanium);
+  font-weight: var(--fw-800);
+  line-height: 1;
+}
+
+.h1 {
+  font-size: var(--fs-2);
+  letter-spacing: -3px;
+}
+
+:is(.h1, .h2, .h3, .card-price) .span {
+  display: inline-block;
+  color: var(--marigold);
+}
+
+
+/*-----------------------------------*\
+#HERO
+\*-----------------------------------*/
+
+.hero {
+  --section-padding: 60px;
+  margin-block-start: 84px;
+  text-align: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.hero-title { 
+  margin-block: 15px 12px; 
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+}
+
+.hero-text {
+  color: black;
+  margin-block-end: 45px;
+  font-size: 20px;
+  font: calibri;
+}
+
+.hero-text span {
+  background-color: black;
+  opacity: 0.7;
+  padding: 15px;
+}
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for larger than 576px screen
+ */
+
+@media (min-width: 576px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .h1 { --fs-2: 7rem; }
+
+
+}
+
+
+
+
+/**
+ * responsive for larger than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 720px; }
+
+  .scrollbar-item { min-width: calc(50% - 15px); }
+
+}
+
+
+
+
+
+/**
+ * responsive for larger than 992px screen
+ */
+
+@media (min-width: 992px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 960px; }
+
+  :is(.header, .hero, .live-match) .container { max-width: unset; }
+
+  .scrollbar-item { min-width: calc(33.33% - 20px); }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero { text-align: left; }
+
+  .hero-banner { display: block; }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+	/* gap: 50px; */  /* Wanted Hero & Home section big text to fit before going to another row */
+  }
+
+}
+
+
+
+
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container,
+  :is(.header, .hero, .live-match) .container { max-width: 1230px; }
+
+  .h1 { --fs-2: 7.5rem; }
+
+  .scrollbar-item { min-width: calc(25% - 22.5px); }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero .container { grid-template-columns: 1fr 1fr; }
+
+
+}
