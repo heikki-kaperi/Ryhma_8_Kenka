@@ -1,0 +1,108 @@
+/*-----------------------------------*\
+#BODY (Some attributes for html <body> section)
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+  input,
+  button {
+    background: none;
+    border: none;
+    font: inherit;
+  }
+
+  button { cursor: pointer; }
+ 
+  body {
+    background-color: var(--raisin-black-3);
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+
+
+
+
+/*-----------------------------------*\
+#HERO (div & text attributes)
+\*-----------------------------------*/
+
+.hero {
+  margin-block-start: 84px;
+  text-align: center;
+}
+
+.hero-text {
+  color: black;
+  margin-block-end: 45px;
+  font-size: 20px;
+  font: calibri;
+}
+
+
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES (Mobile / smaller screen scaling)
+\*-----------------------------------*/
+
+/**
+ * responsive for larger than 576px screen
+ */
+
+@media (min-width: 576px) {
+
+  .container {
+    max-width: 540px;
+    margin-inline: auto;
+  }
+
+}
+
+
+/**
+ * responsive for larger than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+  .container { max-width: 720px; }
+  
+}
+
+
+/**
+ * responsive for larger than 992px screen
+ */
+
+@media (min-width: 992px) {
+
+  .container { max-width: 960px; }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+	/* gap: 50px; */  /* Wanted Hero & Home section big text to fit before going to another row */
+  }
+
+}
+
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+
+  :is(.header, .hero, .live-match) .container { max-width: 1230px; }
+
+  .hero .container { grid-template-columns: 1fr 1fr; }
+
+}
