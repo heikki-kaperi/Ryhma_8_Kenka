@@ -1,0 +1,200 @@
+
+/*-----------------------------------*\
+#BODY (Some attributes for html <body> section)
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Calibri";
+}
+
+
+  input,
+  button {
+    background: none;
+    border: none;
+    font: inherit;
+  }
+ 
+
+
+
+
+
+
+/*-----------------------------------*\
+#HERO (div & text attributes)
+\*-----------------------------------*/
+
+.hero {
+  margin-block-start: 84px;
+  text-align: center;
+}
+
+.hero-text {
+  color: black;
+  margin-block-end: 45px;
+  font-size: 20px;
+  font: calibri;
+}
+
+
+button { cursor: pointer; 
+}
+
+  select { cursor: pointer; 
+}
+ 
+  body {
+    background-color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+.hero {
+  margin-block-start: 84px;
+  text-align: center;
+}
+
+.hero-text {
+  color: black;
+  margin-block-end: 45px;
+  font: calibri;
+  font-size: 30px; 
+
+}
+
+.container {
+    max-width: 540px;
+    margin-inline: auto;
+    max-width: 1230px;
+    border-radius: 25px; 
+    padding: 5px; 
+    outline: 2px solid; 
+    background-image: linear-gradient(to right,  rgb(118, 223, 255), #e67890);
+    border: solid 2px rgb(0, 0, 0);
+}
+  
+.hero .container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+      
+.paivitahaku {
+    padding:20px 60px; 
+    border-radius: 15px; 
+    background-color: rgb(255, 255, 255); 
+    font-size: 24px;
+    margin-right: -85px;
+}
+
+.paivitahaku:hover {
+    background-color: #ddc1c7;
+    color: black;
+}
+
+.paivitahaku:active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.satamateksti {
+    font-size: 30px; 
+    font: calibri;
+}
+
+option:hover {
+    background-color: #e67890;
+}
+
+.laivavalikko {
+    font-size: 20px; 
+    padding: 20px 35px; 
+    border-radius: 10px;
+}
+
+.hero-text {
+    font-size: 30px; 
+}
+
+.tiedot1 {
+    padding:20px; 
+    border-radius: 15px; 
+    background-color:white; 
+    margin-right: 20px;
+    border: solid 3px rgb(0, 0, 0);
+}
+
+.satamavalikko {
+    font-size: 20px; 
+    padding: 20px 25px; 
+    border-radius: 10px;
+}
+
+.yläteksti {
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES (Mobile / smaller screen scaling)
+\*-----------------------------------*/
+
+/**
+ * responsive for larger than 576px screen
+ */
+
+@media (min-width: 576px) {
+
+  .container {
+    max-width: 540px;
+    margin-inline: auto;
+  }
+
+}
+
+
+/**
+ * responsive for larger than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+  .container { max-width: 720px; }
+  
+}
+
+
+/**
+ * responsive for larger than 992px screen
+ */
+
+@media (min-width: 992px) {
+
+  .container { max-width: 960px; }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+  }
+
+}
+
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+
+  :is(.header, .hero, .live-match) .container { max-width: 1230px; }
+
+  .hero .container { grid-template-columns: 1fr 1fr; }
+
+}
